@@ -682,6 +682,12 @@
       <field id="ketrd_convP2K" long_name="ke-trend: conversion (potential to kinetic)"      unit="W/s^3"                        />
       <field id="KE"            long_name="kinetic energy: u(n)*u(n+1)/2"                    unit="W/s^2"                        />   
       <field id="ketrd_eiv"     long_name="Kinetic energy trend from mesoscale eddy advection"   unit="W/s^2" grid_ref="grid_T_2D" />   
+      <!-- variables available when explicit mixing is used -->
+      <field id="dispkexyfo"    long_name="KE-trend: lateral  mixing induced dissipation"   standard_name="ocean_kinetic_energy_dissipation_per_unit_area_due_to_xy_friction"                   unit="W/m^2" grid_ref="grid_T_2D" />   
+      <field id="dispkevfo"     long_name="KE-trend: vertical mixing induced dissipation"   standard_name="ocean_kinetic_energy_dissipation_per_unit_area_due_to_vertical_friction"             unit="W/m^2" grid_ref="grid_T_2D" />   
+      <!-- variables available with key_traadv_eiv and key_diaeiv -->
+      <field id="eketrd_eiv"    long_name="EKE-trend due to parameterized eddy advection"   standard_name="tendency_of_ocean_eddy_kinetic_energy_content_due_to_parameterized_eddy_advection"   unit="W/m^2" grid_ref="grid_T_2D" />   
+
 
       <!-- variables available with ln_PE_trd -->
       <field id="petrd_xad"     long_name="pe-trend: i-advection"                unit="W/m^3"                        />
