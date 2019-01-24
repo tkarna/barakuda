@@ -97,6 +97,7 @@ export NN_CLV="calving"      ; # calving from icebergs in "FILE_FLX_SUFFIX" file
 export NN_E="evap_ao_cea"    ; # name of total evaporation in "FILE_FLX_SUFFIX" file...
 export NN_QNET="X"           ; # name of total net surface heat flux in "FILE_FLX_SUFFIX" file...
 export NN_QSOL="qsr_oce"     ; # name of net surface solar flux in "FILE_FLX_SUFFIX" file...
+export NN_TAUM="X"
 #
 ################################################################################################
 
@@ -115,9 +116,9 @@ export NN_S_OBS="vosaline"
 export NN_SST_OBS="sst"
 #
 # Sea-ice:
-export NM_IC_OBS="Hurrell et al 2008 [1980-1999]"
-export F_ICE_OBS_12=${CONF_INI_DIR}/ice_cover_180x360-ORCA2_Hurrell_monthly_mean1980-1999.nc4
-export NN_ICEF_OBS="ice_cover"
+export NM_IC_OBS="HadISST [1980-1999]"
+export F_ICE_OBS_12=${CONF_INI_DIR}/sic_360x180-ORCA2_HadISST_sosie_bilin.nc
+export NN_ICEF_OBS="sic"
 #
 # Surface Heat fluxes:
 export NM_QSOL_OBS="NOCS 2.0 [1980-2005]"
@@ -125,7 +126,8 @@ export F_QSOL_OBS_12=${BARAKUDA_ROOT}/data/obs/radsw_monthly_clim_1980-2005_NOCS
 export NN_QSOL_OBS="radsw"
 
 # A text file where the vertical hydraugraphical sections of interest are defined :
-export TRANSPORT_SECTION_FILE="${BARAKUDA_ROOT}/data/transportiz_${HCONF}_all.dat"
+#export TRANSPORT_SECTION_FILE="${BARAKUDA_ROOT}/data/transportiz_${HCONF}_all.dat"
+export TRANSPORT_SECTION_FILE="${BARAKUDA_ROOT}/data/transportiz_${HCONF}.dat"
 export TRANSPORT_SECTION_FILE_ICE="${BARAKUDA_ROOT}/data/transport_ice_${HCONF}.dat"  ; # set i_do_trsp_ice=1 !
 
 # For transport by sigma-class:

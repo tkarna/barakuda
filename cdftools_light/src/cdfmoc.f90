@@ -27,6 +27,7 @@ PROGRAM cdfmoc
    !!--------------------------------------------------------------
    !! * Modules used
 
+   USE netcdf
    USE cdfio
    USE io_ezcdf
 
@@ -61,7 +62,7 @@ PROGRAM cdfmoc
    LOGICAL    :: llglo = .false., & !: indicator for presence of new_maskglo.nc file
       &        leiv  = .FALSE.    !: weather to use Eddy Induced velocity from GM90
 
-   INTEGER :: istatus
+   INTEGER :: istatus, kidvar
    INTEGER :: idf_0, idv_0, idf_v, idv_v, idf_veiv, idv_veiv
    LOGICAL :: lmv               ! to check on missing values
    REAL(4) :: missing_value
@@ -193,8 +194,6 @@ PROGRAM cdfmoc
    gdepw(:)   = getvar1d(cf_mm, 'gdepw_1d',npk)
    gdepw(:)   = -1.*  gdepw(:)
 
-
-
    iloc=maxloc(gphiv)
    dumlat(1,:) = gphiv(iloc(1),:)
    dumlon(:,:) = 0.   ! set the dummy longitude to 0
@@ -203,6 +202,10 @@ PROGRAM cdfmoc
    ncout =create(cf_out, 'none', 1,npjglo,npk,cdep='depthw')
    ierr= createvar(ncout ,typvar,jpbasins, ipk,id_varout )
    ierr= putheadervar(ncout, cf_v,1, npjglo,npk,pnavlon=dumlon,pnavlat=dumlat,pdep=gdepw)
+   ! fix var_min and var_max values for depthw
+   ierr= NF90_INQ_VARID(ncout,'depthw',kidvar)
+   ierr= NF90_PUT_ATT(ncout, kidvar, 'valid_max', 0.)
+   ierr= NF90_PUT_ATT(ncout, kidvar, 'valid_min', -5875.)
 
    tim=getvar1d(cf_v,trim(ctim),nt) !LB: nt
    ierr=putvar1d(ncout,tim,nt,'T') !LB: nt
