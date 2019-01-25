@@ -285,7 +285,7 @@ while [ ${jyear} -le ${Y2} ]; do
     wait
 
     ncwa -O -a x moc.nc ${CFG3D}_MOC.nc ; # removing degenerate x record...
-    #rm -f moc.nc
+    rm -f moc.nc
 
     if [ ${ibpsi} -eq 1 ]; then mv -f psi.nc  ${CFG3D}_PSI.nc;   fi
     if [ ${icurl} -eq 1 ]; then mv -f curl.nc ${CFG3D}_TCURL.nc; fi

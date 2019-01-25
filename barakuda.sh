@@ -637,9 +637,9 @@ if [ ${ISTAGE} -eq 2 ]; then
         echo; echo
 
         # Hovmuller of temperature and salinity
-        #echo " *** CALLING: plot_hovm_tz.py"
-        #plot_hovm_tz.py
-        #echo; echo
+        echo " *** CALLING: plot_hovm_tz.py"
+        plot_hovm_tz.py
+        echo; echo
         
         if [ ${nby} -ge 70 ]; then
             # AMO aka 11-year-running mean SST anomaly over North Atlantic (0-70N)
@@ -662,10 +662,10 @@ if [ ${ISTAGE} -eq 2 ]; then
         #
         # Hovmullers of advective meridional heat/salt transport
         echo; echo
-        #echo " *** CALLING: plot_hovm_merid_trsp.py"
-        #plot_hovm_merid_trsp.py
+        echo " *** CALLING: plot_hovm_merid_trsp.py"
+        plot_hovm_merid_trsp.py
         #python -m pdb /home/local/pjuotila/tiede/NEMO/barakuda/python/exec/plot_hovm_merid_trsp.py
-        #echo; echo; echo
+        echo; echo; echo
         #
     fi
 
@@ -971,6 +971,6 @@ else
     echo
 fi
 
-# rm -rf ${TMP_DIR} 2>/dev/null ; #debug
+rm -rf ${TMP_DIR} 2>/dev/null ; #debug
 
 echo
