@@ -109,7 +109,7 @@ for joce in range(nbasins):
     # min and max for field:
     [ rmin, rmax, rdf ] = bt.get_min_max_df(Xheat[joce,jt_ini:,js+1:je-1],40)
         
-    bp.plot("hovmoeller")(vyear[:], vlat[:], nmp.flipud(nmp.rot90(Xheat[joce,:,:])), mask,
+    bp.plot("hovmoeller")(vyear[:], vlat[:], nmp.flipud(nmp.rot90(Xheat[joce,:,:])), nmp.flipud(nmp.rot90(mask)),
                           rmin, rmax, rdf, c_y_is='latitude',
                           cpal='RdBu_r', tmin=yr1, tmax=yr2+1., dt=ittic, lkcont=True,
                           ymin = ymin, ymax = ymax, dy=dy,
@@ -124,7 +124,7 @@ for joce in range(nbasins):
 
     [ rmin, rmax, rdf ] = bt.get_min_max_df(Xsalt[joce,jt_ini:,js+1:je-1],40)
 
-    bp.plot("hovmoeller")(vyear[:], vlat[:], nmp.flipud(nmp.rot90(Xsalt[joce,:,:])), mask,
+    bp.plot("hovmoeller")(vyear[:], vlat[:], nmp.flipud(nmp.rot90(Xsalt[joce,:,:])), nmp.flipud(nmp.rot90(mask)),
                           rmin, rmax, rdf, c_y_is='latitude',
                           cpal='PiYG_r', tmin=yr1, tmax=yr2+1., dt=ittic, lkcont=True,
                           ymin = ymin, ymax = ymax, dy=dy,
