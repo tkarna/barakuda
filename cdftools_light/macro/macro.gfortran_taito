@@ -1,0 +1,18 @@
+# Create with conda environment barakuda
+
+# module purge
+# module load gcc hdf5-serial gcc-serial
+
+NCDF_DIR=/appl/opt/netcdf4/gcc-4.9.3/4.3.3.1
+
+NCDF= -I$(NCDF_DIR)/include -L$(NCDF_DIR)/lib -lnetcdff -lnetcdf
+
+F90=gfortran
+
+# -fdefault-real-8 -fbounds-check
+
+FFLAGS= -O2 -I./mod -J./mod $(NCDF)
+#FFLAGS= -O0 -g -I./mod -J./mod $(NCDF)
+
+#INSTALL=../bin/
+

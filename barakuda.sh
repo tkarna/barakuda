@@ -663,8 +663,8 @@ if [ ${ISTAGE} -eq 2 ]; then
         # Hovmullers of advective meridional heat/salt transport
         echo; echo
         echo " *** CALLING: plot_hovm_merid_trsp.py"
-        plot_hovm_merid_trsp.py
-        #python -m pdb /home/local/pjuotila/tiede/NEMO/barakuda/python/exec/plot_hovm_merid_trsp.py
+        #plot_hovm_merid_trsp.py
+        python -m pdb $USERAPPL/NEMO/barakuda/python/exec/plot_hovm_merid_trsp.py
         echo; echo; echo
         #
     fi
