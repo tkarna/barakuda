@@ -1,13 +1,14 @@
 # Makefile for CDFTOOLS
 # --------------------------------------------------------------
 
-NCDF_DIR=$NETCDF_DIR
+NCDF_DIR=/appl/opt/netcdf4/intel-18.0.1/intelmpi-18.0.1/4.6.1
 
-NCDF= -I$(NCDF_DIR)/include -L$(NCDF_DIR)/lib -lnetcdf
+NCDF= -I$(NCDF_DIR)/include -L$(NCDF_DIR)/lib -lnetcdf -lnetcdff
 
 # -lnetcdff
 
 F90=ifort
 
-FFLAGS= -O3 -module ./mod $(NCDF)
+#FFLAGS= -O3 -module ./mod $(NCDF)
+FFLAGS= -O0 -g -module ./mod $(NCDF)
 
