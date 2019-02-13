@@ -19,11 +19,12 @@ export HCONF=ORCA2
 export CONF=${HCONF}.L31 ; # horizontal global ORCA configuration
 export NBL=31         ; # number of levels
 
-export MASTERMIND="UH / P Uotila" ; # same here, who's the person who designed/ran this simulation?
+export MASTERMIND="UH / "${USER} ; # same here, who's the person who designed/ran this simulation?
 export HOST=taito.csc.fi; # this has no importance at all, it will just become an "info" on the web-page!
 export EXTRA_CONF="LIM3, NEMO 3.6" ;   #  // same here ...
 
-export STORE_DIR=${WRKDIR}"/DONOTREMOVE/NEMO"
+#export STORE_DIR=${WRKDIR}"/DONOTREMOVE/NEMO/NEMOGCM3.6/CONFIG/ORCA2_LIM3_XIOS"
+export STORE_DIR="/wrk/puotila/DONOTREMOVE/NEMO/NEMOGCM3.6/CONFIG/ORCA2_LIM3_XIOS"
 
 export CONF_INI_DIR=${WRKDIR}"/DONOTREMOVE/NEMO/"${HCONF}
 
@@ -44,7 +45,7 @@ export Y_INI_EC=0001 ;    # initial year if ec-earth run...
 export NEMO_SAVED_FILES="grid_T grid_U grid_V icemod SBC"
 
 # Directory structure in which to find NEMO output file (use <ORCA> and <RUN>):
-export NEMO_OUT_STRCT="${STORE_DIR}/NEMOGCM3.6/CONFIG/ORCA2_LIM3_XIOS/"${EXP}
+export NEMO_OUT_STRCT="${STORE_DIR}"/"${EXP}
 
 export TSTAMP="1m"   ; # output time-frequency stamp as in NEMO output files...
 
