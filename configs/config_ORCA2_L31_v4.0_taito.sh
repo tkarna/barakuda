@@ -25,7 +25,7 @@ export EXTRA_CONF="SI3, NEMO 4.0" ;   #  // same here ...
 
 export STORE_DIR=${WRKDIR}"/DONOTREMOVE/sig2019/nemo4.0/cfgs/MY_ORCA2_ICE"
 
-export CONF_INI_DIR=${WRKDIR}"/DONOTREMOVE/NEMO/"${HCONF}
+export CONF_INI_DIR="/wrk/puotila/DONOTREMOVE/NEMO/"${HCONF}
 
 export DIAG_DIR=${WRKDIR}"/DONOTREMOVE/barakuda_diags/"${CONF}
 
