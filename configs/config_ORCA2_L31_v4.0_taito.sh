@@ -27,7 +27,7 @@ export STORE_DIR=${WRKDIR}"/DONOTREMOVE/sig2019/nemo4.0/cfgs/MY_ORCA2_ICE"
 
 export CONF_INI_DIR=${WRKDIR}"/DONOTREMOVE/NEMO/"${HCONF}
 
-export DIAG_DIR=${WRKDIR}"/DONOTREMOVE/barakuda_diags/${CONF}"
+export DIAG_DIR=${WRKDIR}"/DONOTREMOVE/barakuda_diags/"${CONF}
 
 export PYTHON_HOME=${WRKDIR}"miniconda2/bin/python2.7" ; # HOME to python distribution with matplotlib and basemap !
 
