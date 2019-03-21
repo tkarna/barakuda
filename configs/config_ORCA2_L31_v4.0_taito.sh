@@ -13,7 +13,7 @@
 #===========================================================
 #export PROJ_LIB=${WRKDIR}"/miniconda2/share/proj"
 
-export PATH=${PATH}:/wrk/puotila/DONOTREMOVE/taito/bin
+export PATH=${PATH}:/wrk/puotila/DONOTREMOVE/bin
 
 export HCONF=ORCA2
 export CONF=${HCONF}.L31 ; # horizontal global ORCA configuration
