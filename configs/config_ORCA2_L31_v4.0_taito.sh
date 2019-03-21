@@ -27,7 +27,7 @@ export STORE_DIR=${WRKDIR}"/DONOTREMOVE/sig2019/nemo4.0/cfgs/MY_ORCA2_ICE"
 
 export CONF_INI_DIR=${WRKDIR}"/DONOTREMOVE/NEMO/"${HCONF}
 
-export DIAG_DIR=${WRKDIR}"/DONOTREMOVE/NEMO/barakuda_diags/${CONF}"
+export DIAG_DIR=/wrk/puotila/DONOTREMOVE/NEMO/barakuda_diags/${CONF}"
 
 export PYTHON_HOME=${WRKDIR}"miniconda2/bin/python2.7" ; # HOME to python distribution with matplotlib and basemap !
 
@@ -44,7 +44,7 @@ export Y_INI_EC=0001 ;    # initial year if ec-earth run...
 export NEMO_SAVED_FILES="grid_T grid_U grid_V icemod SBC"
 
 # Directory structure in which to find NEMO output file (use <ORCA> and <RUN>):
-export NEMO_OUT_STRCT="${STORE_DIR}"/"${EXP}
+export NEMO_OUT_STRCT=${STORE_DIR}"/"${EXP}
 
 export TSTAMP="1m"   ; # output time-frequency stamp as in NEMO output files...
 
