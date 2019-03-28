@@ -29,7 +29,7 @@ export CONF_INI_DIR="/wrk/puotila/DONOTREMOVE/NEMO/"${HCONF}
 
 export DIAG_DIR=${WRKDIR}"/DONOTREMOVE/barakuda_diags/"${CONF}
 
-export PYTHON_HOME=${WRKDIR}"miniconda2/bin/python2.7" ; # HOME to python distribution with matplotlib and basemap !
+export PYTHON_HOME=${WRKDIR}"/DONOTREMOVE/miniconda2/envs/barakuda" ; # HOME to python distribution with matplotlib and basemap !
 
 export DIR_NCVIEW_CMAP="${BARAKUDA_ROOT}/src/ncview_colormaps"
 

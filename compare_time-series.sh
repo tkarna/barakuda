@@ -18,7 +18,7 @@ export FIG_FORMAT='png'
 
 
 # Supported ORCA grids:
-ORCA_LIST="ORCA025.L75 ORCA1.L75 ORCA1.L46 ORCA1.L42 ORCA2 ORCA2_L46"
+ORCA_LIST="ORCA025.L75 ORCA1.L75 ORCA1.L46 ORCA1.L42 ORCA2 ORCA2_L46 ORCA2.L31"
 
 # Display available configs:
 list_conf="`\ls ${BARAKUDA_ROOT}/configs/config_*.sh | sed -e "s|${BARAKUDA_ROOT}/configs\/config_||g" -e s/'.sh'/''/g`"
