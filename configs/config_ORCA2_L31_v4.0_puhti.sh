@@ -12,11 +12,12 @@
 #
 #===========================================================
 #export PROJ_LIB=${WRKDIR}"/miniconda2/share/proj"
+CSC_PROJECT=project_2000789
 
-export LD_LIBRARY_PATH=${PROJAPPL}/${USER}/miniconda2/envs/barakuda/lib
+export LD_LIBRARY_PATH="/projappl/${CSC_PROJECT}/${USER}/miniconda2/envs/barakuda/lib"
 
-export BARAKUDA_ROOT="/projappl/project_2000789/"${USER}"/barakuda"
-export WRKDIR=${SCRATCH}/${USER}
+export BARAKUDA_ROOT="/projappl/${CSC_PROJECT}/${USER}/barakuda"
+export WRKDIR="/scratch/${CSC_PROJECT}/${USER}"
 #export PATH=${PATH}
 
 export HCONF=ORCA2
@@ -29,11 +30,11 @@ export EXTRA_CONF="SI3, NEMO 4.0.4" ;   #  // same here ...
 
 export STORE_DIR=${WRKDIR}"/nemo4.0/cfgs/MY_ORCA2_ICE"
 
-export CONF_INI_DIR="/projappl/project_2000789/nemoinput/"${HCONF}
+export CONF_INI_DIR="/projappl/${CSC_PROJECT}/nemoinput/"${HCONF}
 
 export DIAG_DIR=${WRKDIR}"/barakuda_diags/"${CONF}
 
-export PYTHON_HOME="/projappl/project_2000789/"${USER}"/miniconda2/envs/barakuda" ; # HOME to python distribution with matplotlib and basemap !
+export PYTHON_HOME="/projappl/${CSC_PROJECT}/"${USER}"/miniconda2/envs/barakuda" ; # HOME to python distribution with matplotlib and basemap !
 
 export DIR_NCVIEW_CMAP="${BARAKUDA_ROOT}/src/ncview_colormaps"
 
@@ -63,7 +64,7 @@ export NEMO_FILE_PREFIX="<ORCA>_<TSTAMP>_"
 # => should get rid of TSTAMP actually...
 
 # Temporary file system (scratch) on which to perform the job you can use <JOB_ID> if scracth depends on JOB ID:
-export SCRATCH=${SCRATCH}"/"${USER}
+export SCRATCH=/scratch/${CSC_PROJECT}/${USER}
 
 
 ####### NEMO => what fields in what files ??? ############
